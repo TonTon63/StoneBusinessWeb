@@ -1,0 +1,84 @@
+﻿@model ContactoViewModel
+
+@{
+    ViewData["Title"] = "Contacto";
+}
+
+<section class="page-banner small-banner">
+    <div class="container">
+        <span class="eyebrow">Contacto</span>
+        <h1>Estamos listos para atender su proyecto</h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container contact-grid">
+        <div>
+            <h2>Contáctenos</h2>
+            <p>
+                Puede escribirnos para solicitar una cotización, hacer una consulta o
+                recibir más información sobre nuestros servicios y materiales.
+            </p>
+
+            <div class="contact-info-box">
+                <p><strong>Teléfono:</strong> +506 8888-8888</p>
+                <p><strong>Correo:</strong> info@piedranaturalriooro.com</p>
+                <p><strong>Ubicación:</strong> San Pedro de Santa Bárbara, Heredia, Costa Rica</p>
+            </div>
+        </div>
+
+        <div class="form-card">
+            @if (TempData["MensajeExito"] != null)
+            {
+                <div class="alert-success">
+                    @TempData["MensajeExito"]
+                </div>
+            }
+
+            <form asp-action="Contacto" method="post">
+                @Html.AntiForgeryToken()
+
+                <div class="form-group">
+                    <label asp-for="Nombre"></label>
+                    <input asp-for="Nombre" class="form-control" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Correo"></label>
+                    <input asp-for="Correo" class="form-control" />
+                    <span asp-validation-for="Correo" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Telefono"></label>
+                    <input asp-for="Telefono" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Servicio"></label>
+                    <select asp-for="Servicio" class="form-control">
+                        <option value="">Seleccione una opción</option>
+                        <option>Sobres de cocina</option>
+                        <option>Baños</option>
+                        <option>Revestimientos</option>
+                        <option>Escaleras</option>
+                        <option>Proyecto personalizado</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Mensaje"></label>
+                    <textarea asp-for="Mensaje" class="form-control" rows="5"></textarea>
+                    <span asp-validation-for="Mensaje" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-dark w-100">Enviar</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

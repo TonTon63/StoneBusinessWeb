@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Piedra Natural Río Oro</title>
+
+    <meta name="description" content="Especialistas en granito, cuarzo, mármol y porcelánico en Costa Rica." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-container">
+            <a asp-controller="Home" asp-action="Index" class="brand brand-clean">
+                <div class="brand-text">
+                    <span class="brand-main">Piedra Natural Río Oro</span>
+                    <span class="brand-sub">Granito · Cuarzo · Mármol · Porcelánico</span>
+                </div>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <a asp-controller="Home" asp-action="Index">Inicio</a>
+                <a asp-controller="Home" asp-action="Nosotros">Nosotros</a>
+                <a asp-controller="Home" asp-action="Servicios">Servicios</a>
+                <a asp-controller="Home" asp-action="Proyectos">Proyectos</a>
+                <a asp-controller="Home" asp-action="Contacto" class="nav-cta">Contáctenos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="footer-brand-box">
+                    <img src="~/images/logo-rio-oro.jpg" alt="Logo Piedra Natural Río Oro" class="footer-logo-img" />
+                    <div>
+                        <h3>Piedra Natural Río Oro</h3>
+                        <p>
+                            Diseño, fabricación e instalación de granito, cuarzo, mármol y porcelánico
+                            para proyectos residenciales y comerciales.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a asp-controller="Home" asp-action="Index">Inicio</a></li>
+                    <li><a asp-controller="Home" asp-action="Nosotros">Nosotros</a></li>
+                    <li><a asp-controller="Home" asp-action="Servicios">Servicios</a></li>
+                    <li><a asp-controller="Home" asp-action="Proyectos">Proyectos</a></li>
+                    <li><a asp-controller="Home" asp-action="Contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Contacto</h4>
+                <p>San Pedro de Santa Bárbara, Heredia, Costa Rica</p>
+                <p>+506 8888-8888</p>
+                <p>info@piedranaturalriooro.com</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; @DateTime.Now.Year Piedra Natural Río Oro. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/50688888888?text=Hola,%20me%20interesa%20cotizar%20un%20proyecto"
+           class="whatsapp-btn"
+           target="_blank"
+           rel="noopener">
+        WhatsApp
+    </a>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

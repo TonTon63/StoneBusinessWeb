@@ -1,0 +1,138 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <span class="eyebrow">Piedra Natural Río Oro</span>
+        <h1>Granito, cuarzo, mármol y porcelánico para espacios con carácter</h1>
+        <p>
+            En Piedra Natural Río Oro desarrollamos proyectos elegantes y funcionales
+            para cocinas, baños, revestimientos, escaleras y espacios personalizados.
+        </p>
+        <div class="hero-actions">
+            <a asp-controller="Home" asp-action="Proyectos" class="btn btn-light">Ver proyectos</a>
+            <a asp-controller="Home" asp-action="Contacto" class="btn btn-outline">Solicitar cotización</a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container intro-grid">
+        <div>
+            <span class="eyebrow">Sobre nosotros</span>
+            <h2>Calidad, detalle y acabados que elevan cada proyecto</h2>
+            <p>
+                Nos especializamos en el trabajo con piedra natural y superficies premium,
+                ofreciendo soluciones elegantes, duraderas y adaptadas a cada necesidad.
+                Atendemos proyectos residenciales y comerciales desde San Pedro de Santa Bárbara,
+                Heredia, Costa Rica.
+            </p>
+            <a asp-controller="Home" asp-action="Nosotros" class="text-link">Conocer más</a>
+        </div>
+        <div>
+            <img src="~/images/proyecto-escalera-granito-negro.jpg" alt="Escalera en granito negro" class="rounded-img" />
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-heading center">
+            <span class="eyebrow">Nuestros materiales</span>
+            <h2>Materiales que combinan resistencia y estética</h2>
+        </div>
+
+        <div class="cards-grid four">
+            <article class="card">
+                <img src="~/images/detalle-granito-negro-vetas-doradas.png" alt="Granito" />
+                <h3>Granito</h3>
+                <p>Ideal para cocinas y espacios de alto uso por su resistencia, presencia y durabilidad.</p>
+            </article>
+
+            <article class="card">
+                <img src="~/images/proyecto-cocina-isla-gris.png" alt="Cuarzo" />
+                <h3>Cuarzo</h3>
+                <p>Una opción moderna y elegante, perfecta para superficies limpias y de bajo mantenimiento.</p>
+            </article>
+
+            <article class="card">
+                <img src="~/images/proyecto-cocina-blanca-marmol.png" alt="Mármol" />
+                <h3>Mármol</h3>
+                <p>Aporta un estilo sofisticado y atemporal, ideal para espacios de alto nivel estético.</p>
+            </article>
+
+            <article class="card">
+                <img src="~/images/proyecto-lavamanos-comercial.png" alt="Porcelánico" />
+                <h3>Porcelánico</h3>
+                <p>Versátil, contemporáneo y excelente para proyectos modernos en interiores y exteriores.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-heading center">
+            <span class="eyebrow">Servicios</span>
+            <h2>Soluciones para diferentes tipos de proyecto</h2>
+        </div>
+
+        <div class="cards-grid three">
+            <article class="service-box">
+                <h3>Sobres de cocina</h3>
+                <p>Diseño e instalación de sobres personalizados con acabados elegantes y funcionales.</p>
+            </article>
+            <article class="service-box">
+                <h3>Baños y lavamanos</h3>
+                <p>Superficies y detalles en piedra para espacios modernos, limpios y duraderos.</p>
+            </article>
+            <article class="service-box">
+                <h3>Revestimientos y detalles</h3>
+                <p>Aplicaciones decorativas para interiores y exteriores con gran impacto visual.</p>
+            </article>
+        </div>
+
+        <div class="center mt-32">
+            <a asp-controller="Home" asp-action="Servicios" class="btn btn-dark">Ver todos los servicios</a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-heading center">
+            <span class="eyebrow">Proyectos destacados</span>
+            <h2>Algunos trabajos realizados</h2>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="~/images/proyecto-cocina-negra-01.png" alt="Cocina moderna con sobres negros" />
+            </div>
+            <div class="gallery-item">
+                <img src="~/images/proyecto-cocina-negra-02.png" alt="Cocina moderna con iluminación y sobres oscuros" />
+            </div>
+            <div class="gallery-item">
+                <img src="~/images/proyecto-cocina-blanca-marmol.png" alt="Cocina blanca con acabado tipo mármol" />
+            </div>
+        </div>
+
+        <div class="center mt-32">
+            <a asp-controller="Home" asp-action="Proyectos" class="btn btn-dark">Ver galería completa</a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-dark">
+    <div class="container cta-block">
+        <span class="eyebrow light">Contáctenos</span>
+        <h2>Hagamos realidad su próximo proyecto</h2>
+        <p>
+            Cuéntenos qué necesita y con gusto le ayudamos a encontrar la mejor solución
+            para su hogar, negocio o proyecto personalizado.
+        </p>
+        <a asp-controller="Home" asp-action="Contacto" class="btn btn-light">Solicitar información</a>
+    </div>
+</section>
